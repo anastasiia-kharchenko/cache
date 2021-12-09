@@ -1,0 +1,29 @@
+
+cycles = 2_000_000; 11 times (first round - warmup)
+increment:
+race -      time.total: 0.03, time.warmup: 0.02, time.bench: 0.02
+volatile -  time.total: 1.79, time.warmup: 0.17, time.bench: 1.62
+atomic -    time.total: 1.80, time.warmup: 0.18, time.bench: 1.62
+sync -      time.total: 3.32, time.warmup: 0.35, time.bench: 2.98
+
+
+plus:
+race -      time.total: 0.03, time.warmup: 0.01, time.bench: 0.02
+atomic -    time.total: 1.60, time.warmup: 0.27, time.bench: 1.33
+volatile -  time.total: 1.88, time.warmup: 0.18, time.bench: 1.70
+sync -      time.total: 2.98, time.warmup: 0.31, time.bench: 2.67
+
+
+cycles = 8_000_000; 11 times (first round - warmup)
+increment:
+race -      time.total: 0.06, time.warmup: 0.02, time.bench: 0.04
+atomic -    time.total: 8.07, time.warmup: 0.84, time.bench: 7.23
+volatile -  time.total: 9.66, time.warmup: 0.90, time.bench: 8.76
+sync -      time.total: 17.83, time.warmup: 1.79, time.bench: 16.04
+
+
+plus:
+race -      time.total: 0.06, time.warmup: 0.02, time.bench: 0.04
+atomic -    time.total: 6.32, time.warmup: 0.61, time.bench: 5.71
+volatile -  time.total: 9.58, time.warmup: 0.69, time.bench: 8.90
+sync -      time.total: 13.55, time.warmup: 1.27, time.bench: 12.28
